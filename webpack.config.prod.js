@@ -12,7 +12,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[chunkhash:8].bundle.js',
-    publicPath: '/'
+    publicPath: '/bindo-frontend/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
