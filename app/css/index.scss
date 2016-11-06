@@ -10,6 +10,12 @@
     color: #fff;
   }
 }
+.btn:focus {
+  outline: none;
+}
+.btn.active:focus {
+  outline: none;
+}
 
 .title {
   margin: 4em 0;

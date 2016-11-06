@@ -10,24 +10,26 @@ export default class Presenter extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      detail_person: "",
+      detail_person: this.props.data[0],
+      data: this.props.data
     }
 
     _.bindAll(this, ['handleClickRow']);
   }
 
-  componentDidMount() {
-    const { data } = this.props
+  componentWillReceiveProps(nextProps) {
     this.setState({
-      detail_person: data[0]
+      detail_person: nextProps.data[0],
+      data: nextProps.data
     });
   }
 
   handleClickRow(p) {
-    const { data } = this.props
+    let data = this.state.data
     let id = p.id
+    let person = _.find(data, function(o) { return o.id === id; });
     this.setState({
-      detail_person: data[id]
+      detail_person: person
     });
   }
 
@@ -39,7 +41,6 @@ export default class Presenter extends React.Component {
                <td>{p.age}</td>
              </tr>);
     });
-    let chosen_person = this.state.detail_person;
 
     return(
       <div className="row content-wrapper">
@@ -57,7 +58,7 @@ export default class Presenter extends React.Component {
           </table>
         </div>
 
-        <DetailArea chosenPerson={chosen_person}/>
+        <DetailArea chosenPerson={this.state.detail_person}/>
 
       </div>
     );

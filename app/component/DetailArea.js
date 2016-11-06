@@ -4,8 +4,6 @@ import '../css/index.scss';
 import $ from 'jquery';
 import _ from 'lodash';
 
-// import jobs from '../img/jobs.jpg';
-
 export default class DetailArea extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -13,11 +11,12 @@ export default class DetailArea extends React.Component {
 
   render() {
     const { chosenPerson } = this.props
-    console.log(chosenPerson)
     if (_.isEmpty(chosenPerson)) {
       return(
-        <div className="alert alert-warning">
-          <strong>Warning!</strong> There are no such person
+        <div className="col-md-8 details-wrapper">
+          <div className="alert alert-warning">
+            <strong>Warning!</strong> There are no such person
+          </div>
         </div>
       )
     } else {
