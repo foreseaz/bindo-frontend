@@ -16,7 +16,7 @@ function baseConfig(config, contentBase) {
     inline: true,
     progress: true,
     contentBase: contentBase,
-    stats: { colors: true } // 用颜色标识
+    stats: { colors: true }
   });
 }
 

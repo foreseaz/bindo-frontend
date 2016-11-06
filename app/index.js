@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hello from './component/Hello';
+import Container from './component/Container';
 
 ReactDOM.render(
-  <Hello />,
+  <Container />,
   document.getElementById('root')
 );

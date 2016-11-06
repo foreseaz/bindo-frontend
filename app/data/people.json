@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "name": "Steve Jobs",
+    "age": 56,
+    "phone": "(629) 653-9041",
+    "image": "steve",
+    "phrase": "Owmeco jen be tezpoksim vojuz..."
+  },
+  {
+    "id": 1,
+    "name": "Leonard Cohen",
+    "age": 82,
+    "phone": "(629) 827-3827",
+    "image": "cohen",
+    "phrase": "The beautiful loser"
+  },
+  {
+    "id": 2,
+    "name": "Bob Dylan",
+    "age": 75,
+    "phone": "(812) 781-2351",
+    "image": "dylan",
+    "phrase": "The answer my friend, it's blowin' in the wind..."
+  },
+  {
+    "id": 3,
+    "name": "Kurt Cobain",
+    "age": 27,
+    "phone": "(812) 128-2492",
+    "image": "kurt",
+    "phrase": "Okay, so I get to wake up today and have another day and he doesn't..."
+  },
+  {
+    "id": 4,
+    "name": "Johny Ive",
+    "age": 49,
+    "phone": "(723) 192-8474",
+    "image": "ive",
+    "phrase": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 5,
+    "name": "Tim Cook",
+    "age": 56,
+    "phone": "(192) 1283-8278",
+    "image": "cook",
+    "phrase": "Sed neque metus, eleifend sed aliquam in, bibendum eget arcu."
+  },
+  {
+    "id": 6,
+    "name": "Craig Federighi",
+    "age": 47,
+    "phone": "(182) 192-8294",
+    "image": "craig",
+    "phrase": "Cum sociis natoque penatibus et magnis dis parturient montes..."
+  },
+  {
+    "id": 7,
+    "name": "Hartmut Esslinger",
+    "age": 72,
+    "phone": "(823) 9294-819",
+    "image": "esslinger",
+    "phrase": "Pellentesque malesuada volutpat quam vel rutrum."
+  },
+  {
+    "id": 8,
+    "name": "Mark Zuckerberg",
+    "age": 32,
+    "phone": "(821) 380-8293",
+    "image": "mark",
+    "phrase": "Aliquam tincidunt dolor ac lacinia consequat."
+  },
+  {
+    "id": 9,
+    "name": "Bill Gates",
+    "age": 61,
+    "phone": "(218) 920-8190",
+    "image": "bill",
+    "phrase": "Quisque rhoncus aliquam dictum."
+  }
+]
