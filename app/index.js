@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Container from './component/Container';
+import people_data from './assets/people.json';
 
 ReactDOM.render(
-  <Container />,
+  <Container data={people_data} />,
   document.getElementById('root')
 );

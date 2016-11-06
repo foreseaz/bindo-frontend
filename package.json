@@ -8,7 +8,7 @@
     "start": "export NODE_ENV=development && webpack-dashboard -- node server.js  && npm run lint:watch",
     "start:prod": "export NODE_ENV=production && npm run build && webpack-dashboard -- node server.js",
     "build": "npm run remove:build && NODE_ENV=production && webpack -p --config webpack.config.prod.js --progress --colors",
-    "deploy": "npm run build && git subtree push --prefix build origin gh-pages",
+    "deploy": "git subtree push --prefix build origin gh-pages",
     "clean:build": "npm run remove-build && mkdir build",
     "remove:build": "rimraf build",
     "lint": "esw webpack.config.* app",
@@ -17,6 +17,9 @@
   "author": "chenbin92 (https://github.com/chenbin92)",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.1.1",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.16.6",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",

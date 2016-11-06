@@ -1,11 +1,42 @@
 import React from 'react';
 import '../css/index.scss';
 
-import logo from '../img/logo.png';
-import jobs from '../img/jobs.jpg';
+import $ from 'jquery';
 
-class Container extends React.Component {
+import Presenter from './Presenter';
+import logo from '../img/logo.png';
+
+export default class Container extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+  }
+
+  getInitialState() {
+    return {
+      // people: people_data
+    };
+  }
+
+  componentWillMount() {
+    // $.ajax({
+    //   // url: "http://localhost:8000/people.json",
+    //   // dataType: 'json',
+    //   dataType: 'jsonp',
+    //   cache: false,
+    //   success: function(data) {
+    //     console.dir(data);
+    //     // this.setState({
+    //     //   people: data,
+    //     // });
+    //   }.bind(this),
+    //   error: function(xhr, status, err) {
+    //     console.error('People Data Loading Failed', status, err.toString());
+    //   }.bind(this)
+    // });
+  }
+
   render() {
+    let { data } = this.props
     return (
       <div className="container-fluid wrapper">
         <div className="text-center title"><h1>Bindo Labs Frontend Test</h1></div>
@@ -24,66 +55,8 @@ class Container extends React.Component {
             </div>
           </div>
 
-          <div className="row content-wrapper">
-            <div className="col-md-4">
-              <table className="table table-hover table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Steve Jobs</td>
-                    <td>55</td>
-                  </tr>
-                  <tr>
-                    <td>Bill Gates</td>
-                    <td>62</td>
-                  </tr>
-                  <tr>
-                    <td>Johny Ive</td>
-                    <td>49</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="col-md-8 details-wrapper">
-              <div className="row text-center">
-                <div className="avatar">
-                  <img className="medium circular" src={jobs} />
-                </div>
-              </div>
-              <div className="row">
-                <div className="text-center">
-                  <h3>Steve Jobs</h3>
-                </div>
-                <div className="details">
-                  <div className="attr">
-                    <span>Age:</span>
-                    55
-                  </div>
-                  <div className="attr">
-                    <span>Phone:</span>
-                    (629) 653-9041
-                  </div>
-                  <div className="attr">
-                    <span>Phrase:</span>
-                    <blockquote>
-                      Owmeco jen be tezpoksim vojuz...
-                    </blockquote>
-                  </div>
-                </div>
-                <table class="table">
-                  <tbody>
-                    <tr>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+          <Presenter data={data} />
+
         </div>
         <div className="src-code">
           <img src={logo} />
@@ -93,5 +66,3 @@ class Container extends React.Component {
     );
   }
 }
-
-export default Container;
